@@ -66,3 +66,88 @@ class RPLidarA1(Laser):
         
         Laser.__init__(self, 360, 5.5, 360, 12000, detectionMargin, offsetMillimeters)
 
+
+class PygameTeste(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 240, 
+        scan_rate_hz = 1000, 
+        detection_angle_degrees = 240, 
+        distance_no_detection_mm = 2000, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)
+
+
+class Unity360(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 360, 
+        scan_rate_hz = 10, 
+        detection_angle_degrees = 360, 
+        distance_no_detection_mm = 100000, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)
+
+class Unity240(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 240, 
+        scan_rate_hz = 10, 
+        detection_angle_degrees = 240, 
+        distance_no_detection_mm = 1999, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)
+
+class Unity180(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 180, 
+        scan_rate_hz = 10, 
+        detection_angle_degrees = 180, 
+        distance_no_detection_mm = 1999, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)
+
+class Unity120(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 120, 
+        scan_rate_hz = 10, 
+        detection_angle_degrees = 120, 
+        distance_no_detection_mm = 1999, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)
+
+class Unity60(Laser):
+    '''
+    A class for experiment using pygame
+    '''
+    def __init__(self, detectionMargin = 0, offsetMillimeters = 0):
+        
+        Laser.__init__(self, 
+        scan_size = 60, 
+        scan_rate_hz = 10, 
+        detection_angle_degrees = 60, 
+        distance_no_detection_mm = 1999, 
+        detection_margin = detectionMargin, 
+        offset_mm = offsetMillimeters)

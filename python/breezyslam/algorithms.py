@@ -25,13 +25,13 @@ import math
 import time
 
 # Basic params
-_DEFAULT_MAP_QUALITY         = 50 # out of 255
-_DEFAULT_HOLE_WIDTH_MM       = 600
+_DEFAULT_MAP_QUALITY         = 1 # out of 255
+_DEFAULT_HOLE_WIDTH_MM       = 250
 
 # Random mutation hill-climbing (RMHC) params
-_DEFAULT_SIGMA_XY_MM         = 100
-_DEFAULT_SIGMA_THETA_DEGREES = 20
-_DEFAULT_MAX_SEARCH_ITER     = 1000
+_DEFAULT_SIGMA_XY_MM         = 100 
+_DEFAULT_SIGMA_THETA_DEGREES = 75
+_DEFAULT_MAX_SEARCH_ITER     = 5000
 
 # CoreSLAM class ------------------------------------------------------------------------------------------------------
 
@@ -97,7 +97,8 @@ class CoreSLAM(object):
         '''
 
         # Convert pose change (dxy,dtheta,dt) to velocities (dxy/dt, dtheta/dt) for scan update
-        velocity_factor = (1 / pose_change[2])  if (pose_change[2] > 0) else 0 # units => units/sec
+        #velocity_factor = (1 / pose_change[2])  if (pose_change[2] > 0) else 0 # units => units/sec
+        velocity_factor = (1)  if (pose_change[2] > 0) else 0 # units => units/sec
         dxy_mm_dt = pose_change[0] * velocity_factor  
         dtheta_degrees_dt = pose_change[1] * velocity_factor
         velocities = (dxy_mm_dt, dtheta_degrees_dt)
